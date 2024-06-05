@@ -1,0 +1,316 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+
+.header_logo{
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgba(8, 135, 204, 0.166);
+    border-radius: 10px 10px;
+    border: 2px ridge rgba(15, 177, 217, 0.166);
+}
+
+ul,
+.header_logo{
+    padding-top: 10px;
+    font-size: 24px;
+    
+}
+.sticky-header {
+   
+    border-bottom: 2px solid hsla(0, 0%, 0%, 0.116);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fffdfd;
+    color: white;
+    padding: 10px 250px;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; 
+}
+
+/* header{
+    display: flex;   
+    justify-content: space-between;
+} */
+
+header ul{
+    text-align: center;
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+    
+    
+}
+
+.header_topic{
+    font-family: "Oswald", sans-serif;
+}
+
+.header_image img{
+    position: relative;
+    top: -6px;
+}
+
+main{
+    margin-top: 120px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+main img{
+    filter: brightness(80%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.living_room{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.skin_care{
+    grid-column: 3 / 4;
+    grid-row: 1 / 3 ;
+}
+
+.kitchen{
+    grid-column: 4 / 5;
+    grid-row: auto;
+}
+
+.electronics{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+
+.main{
+    position: relative;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.main:hover {
+    filter: brightness(90%);
+    border: 2px solid hsla(17, 23%, 6%, 0.789); /* Môžete upraviť farbu podľa potreby */
+}
+
+
+.main::after {
+    transition: background-color 0.3s ease;
+}
+
+.main:hover::after {
+    
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.picture_description{
+    position: absolute;
+    left: 10px; /* Môžete upraviť podľa potreby */
+    bottom: 10px; /* Môžete upraviť podľa potreby */
+    margin: 0;
+    padding: 5px;
+    color: white; /* Farba textu */
+    font-size: 24px;
+}
+
+.title_main{
+    padding: 20px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;;
+}
+
+
+
+
+
+
+.products{
+    margin: 0 20px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 2px solid hsla(0, 0%, 0%, 0.555);
+}
+
+.product img{
+    border: 2px solid hsl(0, 0%, 0%);
+}
+
+
+.name-product{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.cost{
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.product .item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 10px;
+    flex-grow: 1; 
+   
+}
+
+.banner-section{
+    margin: 20px 0;
+    display: flex;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 20px;
+}
+
+.banner-content h1{
+    font-size: 36px; 
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button{
+    
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.banner-image{
+    width:50%
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trend{
+    padding: 20px;
+    text-align: center;
+}
+
+.width-change img{
+    width: 200px;
+    
+}
+.overflow-gone{
+    overflow-x: visible;
+}
+
+footer{
+    position: relative;
+    left: -250px;
+    width: calc(100% + 500px);
+    background-color: #333;
+    color: #fff;
+    padding: 80px;
+    background-color: #323030;
+}
+
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+
+footer ul li {
+    display: inline;
+    
+}
+
+
+footer ul a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent; /* Preddefinovanie priestoru pre border-bottom */
+    transition: border-bottom 0.3s; /* Plynulý prechod pre border-bottom */
+}
+
+footer ul a:hover {
+    border-bottom: 2px solid white; /* Viditeľný border-bottom pri hover */
+}
+
+.index2{
+    margin-top: 150px;
+    flex-wrap: wrap;
+    margin-left: 180px;
+}
+
+.index2 .product{
+    width: 20%;
+}
+
+.index2 .item-info .name-product{
+    text-align: center;
+}
+
+
+.product:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.733);
+}
+
+.info{
+    text-align: center;
+}
