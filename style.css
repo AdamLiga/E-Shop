@@ -313,3 +313,33 @@ footer ul a:hover {
     }
     
 }
+
+@media (max-width: 576px) {
+
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "living_room"
+        "skin_care"
+        "kitchen"
+        "electronics"
+        ;
+    }
+
+    .header_logo{
+        width: 75px;
+        height: 20px;
+        font-size: 5px;
+        text-align: center;
+    }
+
+    .banner-content{
+        display: block;
+        width: 100%;
+    }
+
+    .banner-image{
+        visibility: hidden;
+    }
+}
