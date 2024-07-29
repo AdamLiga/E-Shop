@@ -154,7 +154,9 @@ main img{
     flex-direction: column;
     padding: 25px;
     border: 2px solid hsla(0, 0%, 0%, 0.555);
+    flex: 0 0 auto; /* Zabráni roztiahnutiu prvkov */
 }
+
 
 .product img{
     border: 2px solid hsl(0, 0%, 0%);
@@ -308,7 +310,6 @@ footer ul a:hover {
 
     .product{
         max-width: 200px;
-        overflow-x: auto;
     }
     
 }
