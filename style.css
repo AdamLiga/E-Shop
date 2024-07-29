@@ -231,6 +231,7 @@ main img{
 .trend{
     padding: 20px;
     text-align: center;
+    overflow-x: auto;
 }
 
 .width-change img{
