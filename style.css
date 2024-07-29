@@ -234,11 +234,8 @@ main img{
 }
 
 .width-change img{
-    width: 200px;
+    max-width: 200px;
     
-}
-.overflow-gone{
-    /* overflow-x: visible; */
 }
 
 footer{
@@ -283,14 +280,6 @@ footer ul a:hover {
     margin-top: 150px;
     flex-wrap: wrap;
     margin-left: 180px;
-}
-
-.index2 .product{
-    width: 20%;
-}
-
-.index2 .item-info .name-product{
-    text-align: center;
 }
 
 
