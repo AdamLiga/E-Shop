@@ -22,40 +22,26 @@ body{
 
 
 .header_logo{
+    display: block;
     margin-top: 10px;
     padding: 10px 15px;
+    margin-left: 50px;
     background-color: rgba(8, 135, 204, 0.166);
     border-radius: 10px 10px;
     border: 2px ridge rgba(15, 177, 217, 0.166);
+    max-width: 300px;
 }
 
 ul,
 .header_logo{
-    padding-top: 10px;
     font-size: 24px;
-    
-}
-.sticky-header {
-   
-    border-bottom: 2px solid hsla(0, 0%, 0%, 0.116);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fffdfd;
-    color: white;
-    padding: 10px 250px;
-    z-index: 1000; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box; 
 }
 
-/* header{
+header{
     display: flex;   
     justify-content: space-between;
-} */
+    margin-top: 20px;
+}
 
 header ul{
     text-align: center;
@@ -81,6 +67,10 @@ main{
     gap: 15px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "living_room living_room skin_care kitchen"
+    "living_room living_room skin_care electronics"
+    ;
 }
 
 
@@ -92,23 +82,19 @@ main img{
 }
 
 .living_room{
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
+   grid-area: living_room;
 }
 
 .skin_care{
-    grid-column: 3 / 4;
-    grid-row: 1 / 3 ;
+    grid-area: skin_care;
 }
 
 .kitchen{
-    grid-column: 4 / 5;
-    grid-row: auto;
+    grid-area: kitchen;
 }
 
 .electronics{
-    grid-column: 4 / 5;
-    grid-row: 2 / 3;
+    grid-area: electronics;
 }
 
 
@@ -172,6 +158,7 @@ main img{
 
 .product img{
     border: 2px solid hsl(0, 0%, 0%);
+    
 }
 
 
@@ -251,7 +238,7 @@ main img{
     
 }
 .overflow-gone{
-    overflow-x: visible;
+    /* overflow-x: visible; */
 }
 
 footer{
@@ -313,4 +300,25 @@ footer ul a:hover {
 
 .info{
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+    main{
+        margin-left: 50px;
+        margin-right: 0;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "living_room skin_care"
+        "kitchen electronics"
+        ;
+    }
+
+    .product{
+        max-width: 200px;
+    }
+    
 }
